@@ -8,7 +8,7 @@
 Workshop participants will be catapulted into the simulation of particular situations and will have to plan the use of digital tools to overcome them. We will discuss and explore together the narratives that emerge from these opportunities, in order to observe new approaches and new perspectives on designing communicative solutions.
 
 The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box. The projects will become the content of an exhibition.
-
+<code>
 #
 download a text editor for code in your computer
 sublime text will do. you can use your computer notepad app but we recommend an advance tool.
@@ -41,7 +41,7 @@ edit your artists pages
 <strong> a second title with a different style
 
 #artwork
-
+<code>
 # video
 add a video .pm4; our default file is called video01.mp4 you can rename your file to to video01.mp4 if not you may have to change the name of the file.
 <div class="embed-video"> will allow to recominzed your content as a video
@@ -74,3 +74,4 @@ src="img/03/index.html"> you can add an iframe preview here, changing the src di
 add an Audio .mp3 format; our default file is called audio04.pm3 you can rename your file to audio04 or you can modify the name of the file.
 <div style="float: center"><audio controls> will allow to recominzed your content as a Audio
 <source src="img/04/audio04.mp3" type="audio/mpeg"> change the directory of the file here. keep it simple, export your audio always as mp3 05.html,  06.html, 07.html, 08.html, 09.html, 10.html, are blank pages with our default layout, they’re waiting for your artist content, keep in mind that we create a folder directory for each artist, if you have more than 10 artist just create a new folder add their content link it to their html page, and make sure you add in the index page the link to their work page.
+</code>
