@@ -9,12 +9,12 @@ Workshop participants will be catapulted into the simulation of particular situa
 
 The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box. The projects will become the content of an exhibition.
 
-#
+### 
 
 download a text editor for code in your computer
 sublime text will do. you can use your computer notepad app but we recommend an advance tool.
 
-# edit the pages
+###  edit the pages
 index.html and nothing.html, this pages will contain the presentation of your project
 
 index.html it’s a page that only hold an image preview for each artist, this images are link to each artist html, that you will find in the directory: content >
@@ -31,7 +31,7 @@ edit nothing.html, when you open this file you’ll see that the website layout 
 <br> it’s a line break, you can used for phrasing content.
 easy, right?!
 
-# edit your artists pages
+###  edit your artists pages
 01.html, 02.html, 03.html and 04.html are our exemple pages, the rest are just blank waiting for your content!
 01.html, it’s our video preview, you’ll have the same layout everytime, inside you have:
 <div class="tw"> this is your button to go back to the index page
@@ -41,7 +41,7 @@ easy, right?!
 <p> your description
 <strong> a second title with a different style
 
-# artwork
+###  artwork
 
 <source src="img/04/audio04.mp3" type="audio/mpeg"> change the directory of the file here. keep it simple, export your audio always as mp3 05.html,  06.html, 07.html, 08.html, 09.html, 10.html, are blank pages with our default layout, they’re waiting for your artist content, keep in mind that we create a folder directory for each artist, if you have more than 10 artist just create a new folder add their content link it to their html page, and make sure you add in the index page the link to their work page.
 </code>
