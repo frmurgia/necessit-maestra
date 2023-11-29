@@ -39,7 +39,7 @@ easy, right?!
 <img> your artwork preview image
 <small> title
 <p> your description
-<strong> a second title with a different style <strong>
+<strong> a second title with a different style </strong>
 
 ###  artwork
 
