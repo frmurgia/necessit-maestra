@@ -1,4 +1,4 @@
-# Necessita'-Maestra
+# Necessita'Maestra
 
 *Design exercises within the digital design interstices workshop.*
 
