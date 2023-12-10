@@ -145,10 +145,12 @@ You can modify and add these elements.
 
 
 #### 2.1 title
+change title project here
 ```bash
 <h1 class="titolo"> change title here </h1>
 ```
 #### 2.2 paragraph
+change main text for the project here
 ```bash
 <p class="text">
 
