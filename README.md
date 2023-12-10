@@ -8,7 +8,7 @@
 
 
 
-#abstract
+# abstract
 
 "Necessità Maestra" (Necessity is the teacher) is a reflection of the great master Leonardo da Vinci which suggests the great human ability to find solutions in situations of real necessity. The concept of digital design interstices is very close to that of the Renaissance genius: a design approach focused on resolving everyday issues by employing and reinterpreting available resources.
 Workshop participants will be catapulted into the simulation of particular situations and will have to plan the use of digital tools to overcome them. We will discuss and explore together the narratives that emerge from these opportunities, in order to observe new approaches and new perspectives on designing communicative solutions.
@@ -18,18 +18,18 @@ The participants should have their own computer, the ability to use software to 
 The projects will become the content of an exhibition that can also be visited digitally.
 
 
-##Portable Raspberry Pi 4 Server for Multimedia Sharing
+## Portable Raspberry Pi 4 Server for Multimedia Sharing
 
 
 
 On this page, you will find information on how to build a portable server based on Raspberry Pi 4 for sharing text, video, images, and sound through a website, as well as instructions on how to edit or add content.
 
-###1.1 Install Raspberry Pi os Lite (64-bit)
+### 1.1 Install Raspberry Pi os Lite (64-bit)
 [Install](https://www.raspberrypi.com/software/)  Raspberry Pi OS using Raspberry Pi Imager.
 Connect the Raspberry Pi to the internet router using a LAN cable.
 
 
-###1.2 Install RaspAP
+### 1.2 Install RaspAP
 
 Follow the official RaspAP documentation for installation:
 [RaspAP Documentation](https://docs.raspap.com/)
@@ -57,7 +57,7 @@ SSID: raspi-webgui
 Password: ChangeMe
 ```
 
-###1.3 Install nodogsplash
+### 1.3 Install nodogsplash
 Follow the official RaspAP documentation for Captive portal  installation:
 [Captive portal setup](https://docs.raspap.com/captive/)
 
@@ -122,7 +122,7 @@ host: same address you used to connect with ssh
 
 ```
 
-##2. Edit the pages
+## 2. Edit the pages
 sites/projects/project-1.html, this page will contain your project.
 
 splash.html it’s a page that only hold an menu for each project, that you will find in the directory:
