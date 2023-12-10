@@ -15,7 +15,7 @@ Workshop participants will be catapulted into the simulation of particular situa
 
 The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box.
 
-The projects will become the content of an exhibition that can also be visited digitally.
+The projects will become the content of an exhibition that can also be visited digitally using a portable server that shares, through a public network, the web pages of the projects.
 
 
 ## Portable Raspberry Pi 4 Server for Multimedia Sharing
