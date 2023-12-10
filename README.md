@@ -12,7 +12,7 @@
 "Necessità Maestra" (Necessity is the teacher) is a reflection of the great master Leonardo da Vinci which suggests the great human ability to find solutions in situations of real necessity. The concept of digital design interstices is very close to that of the Renaissance genius: a design approach focused on resolving everyday issues by employing and reinterpreting available resources.
 Workshop participants will be catapulted into the simulation of particular situations and will have to plan the use of digital tools to overcome them. We will discuss and explore together the narratives that emerge from these opportunities, in order to observe new approaches and new perspectives on designing communicative solutions.
 
-The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box. 
+The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box.
 
 The projects will become the content of an exhibition that can also be visited digitally.
 
@@ -124,7 +124,7 @@ host: same address you used to connect with ssh
 ##2. Edit the pages
 sites/projects/project-1.html, this page will contain your project.
 
-splash.html it’s a page that only hold an menu for each project, that you will find in the directory: 
+splash.html it’s a page that only hold an menu for each project, that you will find in the directory:
 ```bash
 / sites
   / spash.hmtl
@@ -133,7 +133,7 @@ splash.html it’s a page that only hold an menu for each project, that you will
        / project-2.html
        / project-3.html
         ...
-    
+
 ```
 project pages organized by number project-1.html, project-2.html, project-3.html, and so on...
 
@@ -145,13 +145,13 @@ You can modify and add these elements.
 
 #### 2.1 title
 ```bash
-<h1 class="titolo"> change title here </h1> 
+<h1 class="titolo"> change title here </h1>
 ```
 #### 2.2 paragraph
 ```bash
 <p class="text">
 
- main text here 
+ main text here
  <br> #line break
 
  </p>
@@ -182,6 +182,5 @@ To upload the gifs, save them in .gif and copy it inside the gif folder
 
 #<h3>gif</h3>
     <img class="gif"src="../gif/here-the-name-of-the-gif.gif">
-            
-```
 
+```
