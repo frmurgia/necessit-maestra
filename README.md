@@ -1,47 +1,184 @@
 # Necessita'-Maestra
 
-## Abstract
-### "Necessità Maestra"
-*Design exercises within digital design interstices*
+*Design exercises within the digital design interstices workshop.*
 
 "Necessità Maestra" (Necessity is the teacher) is a reflection of the great master Leonardo da Vinci which suggests the great human ability to find solutions in situations of real necessity. The concept of digital design interstices is very close to that of the Renaissance genius: a design approach focused on resolving everyday issues by employing and reinterpreting available resources.
 Workshop participants will be catapulted into the simulation of particular situations and will have to plan the use of digital tools to overcome them. We will discuss and explore together the narratives that emerge from these opportunities, in order to observe new approaches and new perspectives on designing communicative solutions.
 
-The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box. The projects will become the content of an exhibition.
+The participants should have their own computer, the ability to use software to work on materials such as images, audio, and video, and a great capacity to design outside the box. 
 
-### 
+The projects will become the content of an exhibition that can also be visited digitally.
 
-download a text editor for code in your computer
-sublime text will do. you can use your computer notepad app but we recommend an advance tool.
+## Portable Raspberry Pi 4 Server for Multimedia Sharing
 
-###  edit the pages
-index.html and nothing.html, this pages will contain the presentation of your project
+On this page, you will find information on how to build a portable server based on Raspberry Pi 4 for sharing text, video, images, and sound through a website, as well as instructions on how to edit or add content.
 
-index.html it’s a page that only hold an image preview for each artist, this images are link to each artist html, that you will find in the directory: content >
+### 1. Install Raspberry Pi os Lite (64-bit)
+[Install](https://www.raspberrypi.com/software/)  Raspberry Pi OS using Raspberry Pi Imager.
+Connect the Raspberry Pi to the internet router using a LAN cable.
 
-art pages organized by number 01.html, 02.html, 03.html, and so on...
 
-keep in mind that you’ve 11 images, #1 will be in this case your “about” that links to “nothing.html”
+### 2. Install RaspAP
 
-edit nothing.html, when you open this file you’ll see that the website layout is inside <div class=”dsc”> keep it like that and only edit the content inside.
-<img> will hold your image preview, you can deleted if you don’t need a top image.
+Follow the official RaspAP documentation for installation:
+[RaspAP Documentation](https://docs.raspap.com/)
 
-<small> place here your title or headline.
-<p> will be the place to write you description, every new <p> it’s a new paragraph.
-<br> it’s a line break, you can used for phrasing content.
-easy, right?!
+Update RPi OS to its latest version, including the kernel and firmware, followed by a reboot:
 
-###  edit your artists pages
-01.html, 02.html, 03.html and 04.html are our exemple pages, the rest are just blank waiting for your content!
-01.html, it’s our video preview, you’ll have the same layout everytime, inside you have:
-<div class="tw"> this is your button to go back to the index page
-<div class="dsc"> the place for your content
-<img> your artwork preview image
-<small> title
-<p> your description
-<strong> a second title with a different style </strong>
+```bash
+sudo apt-get update
+sudo apt-get full-upgrade
+sudo reboot
+```
+Install RaspAP from your device's shell prompt:
 
-###  artwork
+```bash
+curl -sL https://install.raspap.com | bash
 
-<source src="img/04/audio04.mp3" type="audio/mpeg"> change the directory of the file here. keep it simple, export your audio always as mp3 05.html,  06.html, 07.html, 08.html, 09.html, 10.html, are blank pages with our default layout, they’re waiting for your artist content, keep in mind that we create a folder directory for each artist, if you have more than 10 artist just create a new folder add their content link it to their html page, and make sure you add in the index page the link to their work page.
-</code>
+```
+After the reboot at the end of the installation the wireless AP network will be configured as follows:
+```bash
+IP address: 10.3.141.1 (check this on browser)
+Username: admin
+Password: secret
+DHCP range: 10.3.141.50 to 10.3.141.254
+SSID: raspi-webgui
+Password: ChangeMe
+```
+
+
+## 3. Install nodogsplash
+Follow the official RaspAP documentation for Captive portal  installation:
+[Captive portal setup](https://docs.raspap.com/captive/)
+
+With our package manager up to date, install a dependency required by nodogsplash:
+
+```bash
+# Install nodogsplash
+sudo apt-get update
+sudo apt-get install libmicrohttpd-dev
+```
+
+Next, clone the nodogsplash GitHub repository to your home directory:
+
+
+```bash
+cd ~/
+git clone https://github.com/nodogsplash/nodogsplash.git
+```
+We can now compile nodogsplash from the source:
+
+
+```bash
+cd nodogsplash
+make
+sudo make install
+```
+```bash
+sudo nano /etc/nodogsplash/nodogsplash.conf
+
+```
+With nodogsplash installed in the Pi's system, we will make two small changes to its configuration. The nodogsplash GatewayInterface should be set to the interface RaspAP runs on (wlan0 is the default). You will also need to change the GateWayAddress to 10.3.141.1.
+```bash
+# GatewayInterface is not autodetected, has no default, and must be set here.
+# Set GatewayInterface to the interface on your router
+# that is to be managed by Nodogsplash.
+# Typically br-lan for the wired and wireless lan.
+#
+GatewayInterface wlan0
+#
+# Parameter: GatewayAddress
+# Default: Discovered from GatewayInterface
+#
+# This should be autodetected on an OpenWRT system, but if not:
+# Set GatewayAddress to the IP address of the router on
+# the GatewayInterface.  This is the address that the Nodogsplash
+# server listens on.
+GatewayAddress 10.3.141.1
+
+```
+
+Save and quit out of the editor by pressing Ctrl+X and then pressing Y and finally Enter.
+
+Repair permissions to write to the folder where the site is located
+```bash
+sudo chmod 777 /etc/nodogsplash/htdocs
+```
+You can use ftp to upload a new site  ( navigate to /etc/nodogsplash/htdocs)
+```bash
+user: same user you set with raspberry pi imager ( usually pi)
+password:  same password you set with raspberry pi imager (usually raspberry)
+host: same address you used to connect with ssh
+
+```
+
+### Edit the pages
+sites/projects/project-1.html, this page will contain your project.
+
+splash.html it’s a page that only hold an menu for each project, that you will find in the directory: 
+```bash
+/ sites
+  / spash.hmtl
+  / projects   
+       / project-1.html
+       / project-2.html
+       / project-3.html
+        ...
+    
+```
+project pages organized by number project-1.html, project-2.html, project-3.html, and so on...
+
+to modify your page, download a text editor for code in your computer [sublime](https://www.sublimetext.com/) text will do. you can use your computer notepad app but we recommend an advance tool.
+
+You can modify and add these elements.
+*If you are familiar with HTML, CSS, and JS, feel free to modify as you wish.*
+
+
+
+
+
+
+
+#### 1. title
+```bash
+<h1 class="titolo"> change title here </h1> 
+```
+#### 2.paragraph
+```bash
+<p class="text">
+
+ main text here 
+ <br> #line break
+
+ </p>
+```
+
+
+#### 3. video
+To upload the video, save the video in .webm and copy it inside the video folder
+
+```bash
+#<h3>video</h3>
+#<video class="video" autoplay controls>
+        <source src="../video/here-the-name-of-the-video.webm" #type="video/webm">  
+#</video>
+```
+
+#### 4. image
+To upload the images, save them in .png and copy it inside the images folder
+
+```bash
+#<h3>image</h3>
+    <img class="image"src="../images/here-the-name-of-the-image.png">
+
+```
+#### 5. gif
+To upload the gifs, save them in .gif and copy it inside the gif folder
+```bash
+
+#<h3>gif</h3>
+    <img class="gif"src="../gif/here-the-name-of-the-gif.gif">
+            
+```
+
+

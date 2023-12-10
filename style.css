@@ -55,7 +55,7 @@
         padding: 0.5rem;
     }
 
-    .titolo {
+    .title {
 
 
         flex-shrink: 0;
@@ -67,7 +67,7 @@
         line-height: normal;
     }
 
-    .testo {
+    .text {
         width: 100%;
         text-align: justify;
         color: rgba(0, 0, 0, 0.70);
