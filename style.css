@@ -1,0 +1,121 @@
+
+
+    @font-face {
+        font-family: 'Circular Std Bold';
+        src: url('../font/CircularStd-Bold.ttf') format('ttf');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Circular Std Book';
+        src: url('../font/CircularStd-Book.ttf') format('ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body, html {
+    overscroll-behavior: none;
+}
+    body,
+    main {
+        display: block  ;
+        font-family: 'Circular Std Book', sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+        overflow-x: hidden !important;
+        
+    }
+
+    h1 {
+        font-family: 'Circular Std Bold', sans-serif;
+    }
+
+    .lato {
+        transform: rotate(90deg);
+        color: rgba(0, 0, 0, 0.80);
+        font-family: Circular Std;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 450;
+        line-height: normal;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        /* padding: 1rem; */
+        margin: 0 0 0 0;
+    }
+    .home{
+        padding: 0.5rem;
+    }
+
+    .titolo {
+
+
+        flex-shrink: 0;
+        color: rgba(0, 0, 0, 0.70);
+        font-family: Circular Std;
+        font-size: 3.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .testo {
+        width: 100%;
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.70);
+        
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        margin: 0 0 0 0;
+        font-family: "Circular Std Bold", sans-serif;
+        color:black;
+        
+        
+    }
+    /* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+.video {
+    width: 100%;
+    height: auto;
+}
+.gif {
+    width: 100%;
+    height: auto;
+}
+.image {
+    width: 100%;
+    height: auto;
+}
