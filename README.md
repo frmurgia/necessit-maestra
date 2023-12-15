@@ -5,7 +5,7 @@
 - [Abstract](#abstract)
 - [Raspberry](#portable-raspberry-pi-4-server-for-multimedia-sharing)
 - [Edit page project](#2-edit-the-pages)
-
+- [website preview](https://raw.githack.com/frmurgia/necessit-maestra/main/splash.html)
 
 
 # abstract
